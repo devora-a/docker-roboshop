@@ -22,6 +22,9 @@ services:
     - catalogue
     - cart
     - user
+    - shipping
+    - payment
+    
   cart:
     build: ./cart
     image: aravinddharla/cart:4.0.0
