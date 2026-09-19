@@ -63,4 +63,5 @@ volumes:
   catalogue:
   cart:
   user:
+  redis:
 
