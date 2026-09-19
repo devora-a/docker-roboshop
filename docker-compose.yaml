@@ -32,7 +32,7 @@ services:
       CATALOGUE_PORT: 8080
     depends_on:
     - catalogue
-    - redis
+     
   user:
     build: ./user
     image: aravinddharla/user:4.0.0
@@ -42,7 +42,6 @@ services:
       REDIS_URL: 'redis://redis:6379'
       MONGO_URL: "mongodb://mongodb:27017/users"
     depends_on:
-    - redis
     - mongodb
 
 
