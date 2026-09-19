@@ -1,0 +1,24 @@
+name: roboshop
+services:
+  mongodb:
+    build: ./mongodb
+    image: aravinddharla/mongodb:4.0.0 # docker build -t aravinddharla/mongodb:4.0.0 .
+    container_name: mongodb # docker run -d --name mongodb aravinddharla/mongodb:4.0.0
+    volumes:
+    - mongodb:/data/db # mongodb stores data in /data/db directory
+  catalogue:
+     build: ./catalogue
+     image: aravinddharla/catalogue:4.0.0
+     container_name: catalogue
+     depends_on:
+     - mongodb    
+  frountend:
+    build: ./frountend
+    image: aravinddharla/frountend:4.0.0
+    container_name: frountend
+    ports:
+    - "80-80"
+    depends_on:
+    - catalogue
+
+    
