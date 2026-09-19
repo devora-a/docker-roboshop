@@ -20,6 +20,8 @@ services:
     - "80:80"
     depends_on:
     - catalogue
+    - cart
+    - user
   cart:
     build: ./cart
     image: aravinddharla/cart:4.0.0
