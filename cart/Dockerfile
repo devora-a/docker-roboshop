@@ -7,7 +7,7 @@ COPY *.js .
 # node modukes
 RUN npm install
 
-FROM node:20.20.2-alpine3.22 AS builder
+FROM node:20.20.2-alpine3.22 
 WORKDIR /app
 EXPOSE 8080
 RUN addgroup -S roboshop && adduser -S -G roboshop roboshop && \
