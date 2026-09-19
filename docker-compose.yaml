@@ -80,7 +80,7 @@ services:
     volumes:
     - mysql:/var/lib/mysql  
   rabbitmq:
-    image: aravinddharla/rabbitmq:4.0.0
+    image: rabbitmq:3
     container_name: rabbitmq 
     environment:
       RABBITMQ_DEFAULT_USER: roboshop
@@ -97,4 +97,3 @@ volumes:
   mysql:
   rabbitmq:
   redis:
-
